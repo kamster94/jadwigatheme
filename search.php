@@ -15,9 +15,9 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<div class="page-header">
 				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'jadwiga' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+			</div>
 
 			<?php
 			/* Start the Loop */
@@ -40,8 +40,8 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		</main>
+	</section>
 
 <?php
 get_sidebar();

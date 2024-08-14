@@ -21,32 +21,21 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'jadwiga' ); ?></a>
-
+	<a class="skip-link screen-reader-text" href="#content">Przejdź do treści</a>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+			<a href="<?php echo get_home_url(); ?>">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/banner.png" alt="Logo Strony parafii pw. Świętej Królowej Jadwigi w Inowrocławiu" />
+			</a>
+		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'jadwiga' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Nawigacja</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</nav>
+	</header>
 	
-	<div class="call-to-action">
+	<div class="call-to-action" aria-hidden="true">
 		<?php
 		if ( is_active_sidebar( 'slider-1' ) ) {
 			dynamic_sidebar( 'slider-1' );
@@ -54,9 +43,9 @@
 		?>
 		
 		<nav id="aside-navigation" class="secondary-navigation" role="navigation">
-			<h2 class="menu-title">Menu</h2>
+			<h2 class="menu-title">Skróty</h2>
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'secondary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		</nav>
 	</div>
 	<div style="clear:both"></div>
 	<div id="content" class="site-content">

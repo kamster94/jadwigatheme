@@ -13,9 +13,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
-				<header class="page-header">
+				<div class="page-header">
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'jadwiga' ); ?></h1>
-				</header><!-- .page-header -->
+				</div>
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'jadwiga' ); ?></p>
@@ -42,7 +42,7 @@ get_header(); ?>
 							) );
 						?>
 						</ul>
-					</div><!-- .widget -->
+					</div>
 
 					<?php
 						endif;
@@ -54,11 +54,11 @@ get_header(); ?>
 						the_widget( 'WP_Widget_Tag_Cloud' );
 					?>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+				</div>
+			</section>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
 get_footer();

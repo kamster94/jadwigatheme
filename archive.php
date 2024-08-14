@@ -15,12 +15,12 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<div class="page-header">
 				<?php
 					the_archive_title( '<h2 class="archives-title">', '</h2>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</div>
 
 			<?php
 			/* Start the Loop */
@@ -43,8 +43,8 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
 get_sidebar();

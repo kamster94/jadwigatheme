@@ -21,9 +21,9 @@ get_header(); ?>
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
+				<div>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+				</div>
 
 			<?php
 			endif;
@@ -37,18 +37,13 @@ get_header(); ?>
 			$args=array(
 					'showposts' => 5,
 					'category__in' => array($category->term_id),
-					'caller_get_posts'=>1
+					'ignore_sticky_posts' => 1
 			);
 			query_posts($args);
 			echo '<h2 class="category-title">' . $category->name . '</h2>';
-			/* Start the Loop */
+
 			while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
 				get_template_part( 'template-parts/titles', get_post_format() );
 
 			endwhile;
@@ -71,18 +66,13 @@ get_header(); ?>
 				$args=array(
 					'showposts' => 1,
 					'category__in' => array($category->term_id),
-					'caller_get_posts'=>1
+					'ignore_sticky_posts' => 1
 				);
 				query_posts($args); 
 				echo '<h2 class="category-title">' . $category->name . '</h2>';
-				/* Start the Loop */
+
 				while ( have_posts() ) : the_post();
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
 					get_template_part( 'template-parts/titles', get_post_format() );
 
 				endwhile;
@@ -91,16 +81,12 @@ get_header(); ?>
 			
 			}
 
-			//the_posts_navigation();
-
 		else :
-
 			get_template_part( 'template-parts/content', 'none' );
-
 		endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
 get_sidebar();

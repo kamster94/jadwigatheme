@@ -11,9 +11,9 @@
 
 ?>
 
-	</div><!-- #content -->
+	</div>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<div class="info">
 				<p>Parafia pw. św. Królowej Jadwigi<br />
@@ -27,12 +27,12 @@
 				78 1240 1196 1111 0000 1341 3057</p>
 			</div>
 			<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fjadwigaino&amp;width&amp;height=250&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=197915766953655"></iframe>
-		</div><!-- .site-info -->
-		<div class="site-credits">
-				<p>Strona używa plików cookies. Wszelkie prawa zastrzeżone. Projekt i wykonanie strony: <a href="mailto:&#107;&#097;&#109;&#105;&#108;&#046;&#099;&#104;&#109;&#105;&#101;&#108;&#101;&#119;&#115;&#107;&#105;&#064;&#107;&#097;&#109;&#115;&#116;&#101;&#114;&#046;&#112;&#108;">Kamil Chmielewski</a></p>
 		</div>
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+		<div class="site-credits">
+				<p>Strona używa plików cookies. Wszelkie prawa zastrzeżone. Projekt i wykonanie strony: <a href="&#77;&#65;&#73;&#108;&#84;&#79;&#58;&#107;&#97;&#109;&#105;&#108;&#46;&#99;&#104;&#109;&#105;&#101;&#108;&#101;&#119;&#115;&#107;&#105;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">Kamil Chmielewski</a></p>
+		</div>
+	</footer>
+</div>
 
 <?php wp_footer(); ?>
 
