@@ -561,23 +561,23 @@ a:active {
 
 .menu-toggle {
   margin: 10px 10px;
-  border-color: #afc7d3;
+  border-color: #eaeaea;
   background-color: #2f1110;
-  color: #afc7d3;
+  color: #eaeaea;
   text-transform: uppercase;
   font-size: 0.8em;
 }
 
 .menu-toggle:hover {
-  border-color: #d5dadc;
+  border-color: #fafafa;
   background-color: #2f1110;
-  color: #d5dadc;
+  color: #fafafa;
 }
 
 .menu-toggle.toggled-on {
-  border-color: #afc7d3;
+  border-color: #eaeaea;
   background-color: #2f1110;
-  color: #afc7d3;
+  color: #eaeaea;
 }
 
 /* Small menu. */
@@ -634,7 +634,7 @@ a:active {
     display: block;
     text-decoration: none;
     padding: 10px 20px;
-    color: #afc7d3;
+    color: #eaeaea;
   }
 
   .main-navigation ul ul {
@@ -661,7 +661,7 @@ a:active {
   .main-navigation li:hover > a,
   .main-navigation li.focus > a {
     background-color: #2f1110;
-    color: #d5dadc;
+    color: #fafafa;
   }
 
   .main-navigation ul ul :hover > a,
@@ -1133,13 +1133,13 @@ p.nd_liturgia_skrot_baner {
 .site-footer {
   margin-top: 20px;
   background-color: #3a2626;
-  color: #d5dadc;
+  color: #fafafa;
 }
 
 .site-footer a,
 .site-footer a:hover,
 .site-footer a:visited {
-  color: #d5dadc;
+  color: #fafafa;
 }
 
 .site-info {
