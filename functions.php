@@ -115,7 +115,7 @@ add_action( 'widgets_init', 'jadwiga_widgets_init' );
  * Enqueue scripts and styles.
  */
 function jadwiga_scripts() {
-	wp_enqueue_style( 'jadwiga-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'jadwiga-style', get_stylesheet_uri(), '', '1.1.0' );
 
 	wp_enqueue_script( 'jadwiga-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
