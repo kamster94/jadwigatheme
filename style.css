@@ -616,7 +616,7 @@ a:active {
     min-height: 45px;
     position: inherit;
     z-index: auto;
-    background: none;
+    background: #5f4646;
   }
 
   .main-navigation ul {
@@ -906,16 +906,6 @@ p.nd_liturgia_skrot_baner {
   max-width: 900px;
   margin: 0 auto;
   margin-top: 5px;
-}
-
-.slider {
-  max-width: 610px;
-  float: left;
-}
-
-.secondary-navigation {
-  width: 100%;
-  float: left;
 }
 
 .menu-title {

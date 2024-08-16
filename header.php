@@ -34,18 +34,15 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav>
 	</header>
-	
-	<div class="call-to-action" aria-hidden="true">
-		<?php
-		if ( is_active_sidebar( 'slider-1' ) ) {
-			dynamic_sidebar( 'slider-1' );
-		}
-		?>
-		
-		<nav id="aside-navigation" class="secondary-navigation" role="navigation">
-			<h2 class="menu-title">Skróty</h2>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'secondary-menu' ) ); ?>
-		</nav>
-	</div>
-	<div style="clear:both"></div>
+	<?
+	if (is_home()) {
+	?>
+		<div class="call-to-action" aria-hidden="true">
+			<?php
+			if ( is_active_sidebar( 'slider-1' ) ) {
+				dynamic_sidebar( 'slider-1' );
+			}
+			?>
+		</div>
+	<? } ?>
 	<div id="content" class="site-content">
