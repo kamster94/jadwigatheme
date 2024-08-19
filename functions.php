@@ -115,7 +115,7 @@ add_action( 'widgets_init', 'jadwiga_widgets_init' );
  * Enqueue scripts and styles.
  */
 function jadwiga_scripts() {
-	wp_enqueue_style( 'jadwiga-style', get_stylesheet_uri(), '', '1.1.0' );
+	wp_enqueue_style( 'jadwiga-style', get_stylesheet_uri(), '', '1.1.1' );
 
 	wp_enqueue_script( 'jadwiga-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -152,6 +152,34 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+function jadwiga_list_child_pages() { 
+	global $post;
+	if ( !is_page() ) {
+		return '';
+	}
+	$children = get_pages( array( 'child_of' => $post->ID ) );
+	$string = '';
+	if ( count( $children ) > 0 ) {
+		$childpages = wp_list_pages( array(
+    'child_of' => $post->ID,
+    'depth' => 1,
+		'title_li' => "",
+		'echo' => 0
+		) );
+	} else {
+		$childpages = wp_list_pages( array(
+    'child_of' => $post->post_parent,
+    'depth' => 1,
+		'title_li' => "",
+		'echo' => 0
+		) );
+	}
+	if ( $childpages ) {
+		$string = '<ul>' . $childpages . '</ul>';
+	}
+	return $string;
+}
+add_shortcode('jadwiga_childpages', 'jadwiga_list_child_pages');
 add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args, $depth ) {
         if ( $atts['href'] === '#' || empty($atts['href']) ) {
                 $atts['role'] = 'button';
