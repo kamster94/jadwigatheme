@@ -151,3 +151,10 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args, $depth ) {
+        if ( $atts['href'] === '#' || empty($atts['href']) ) {
+                $atts['role'] = 'button';
+        }
+    return $atts;
+}, 10, 4 );
