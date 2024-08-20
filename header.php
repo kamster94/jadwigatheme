@@ -37,7 +37,7 @@
 	<?
 	if (is_home()) {
 	?>
-		<div class="call-to-action" aria-hidden="true">
+		<div class="call-to-action">
 			<?php
 			if ( is_active_sidebar( 'slider-1' ) ) {
 				dynamic_sidebar( 'slider-1' );
